@@ -9,9 +9,9 @@ function volume = simulate_volume(age, intercept, slope)
 
     % Predict the volume on regression line
     volume = intercept + slope * age;
-    
+
     % Add noise (mean = 0, std = intercept/50)
-    noise = randn(size(volume)) * intercept/50;
+    noise = randn(size(volume)) * intercept / 50;
     volume =  volume + noise;
-    
+
 end
